@@ -35,6 +35,7 @@ class ItemsController < ApplicationController
   # GET /items/1/edit
   def edit
     @item = Item.find(params[:id])
+    @categories = Category.find(:all)
   end
 
   # POST /items

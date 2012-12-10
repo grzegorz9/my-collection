@@ -13,7 +13,7 @@
   <tr>
     <td><%= item.title %></td>
     <td><%= item.description[0, 120] + '...' %></td>
-    <td></td>
+    <td><%= item.category.name %></td>
     <td><%= link_to 'More', item %></td>
   </tr>
 <% end %>
