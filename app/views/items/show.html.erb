@@ -1,0 +1,24 @@
+<%= provide(:page_title, @item.title ) %>
+<p id="notice"><%= notice %></p>
+
+<h1>More about this item</h1>
+
+<table align="center">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><%= @item.title %></td>
+    <td><%= @item.description %></td>
+  </tr>  
+</table>
+
+<h3>This item belongs to the category.</h3>
+
+<p>
+  <%= link_to 'Edit', edit_item_path(@item) %>
+  <%= link_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
+
+<p><%= link_to 'Back to the Collection', items_path %></p>

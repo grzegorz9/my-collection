@@ -1,5 +1,8 @@
 MyCollection::Application.routes.draw do
   
+  resources :items
+
+
   root to: 'main_pages#home'
   match '/about', to: 'main_pages#about'
   match '/contact', to: 'main_pages#contact'

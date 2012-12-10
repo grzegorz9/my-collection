@@ -1,0 +1,15 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+    min-width: 600px;
+    max-width: 800px;
+    th {
+        background-color: rgb(150,150,150);
+        color: rgb(255,255,255);
+    }
+    td {
+        background-color: rgb(220,220,220);
+        color: rgb(50,50,50);
+    }
+}
