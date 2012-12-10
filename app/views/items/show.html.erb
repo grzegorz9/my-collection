@@ -22,3 +22,31 @@
 </p>
 
 <p><%= link_to 'Back to the Collection', items_path %></p>
+
+<h3>Add your comment</h3>
+<%= form_for([@item, @item.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.label :commenter %><br />
+    <%= f.text_field :commenter %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<table align="center">
+  <tr>
+    <th>Commenter</th>
+    <th>Comment</th>
+  </tr>
+  <% @item.comments.each do |comment| %>
+  <tr>
+    <td><%= comment.commenter %></td>
+    <td><%= comment.content %></td>
+  </tr>
+  <% end %>
+</table>
