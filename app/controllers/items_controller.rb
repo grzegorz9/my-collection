@@ -14,7 +14,6 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @item }
@@ -80,5 +79,10 @@ class ItemsController < ApplicationController
       format.html { redirect_to items_url }
       format.json { head :no_content }
     end
+  end
+  
+  def search
+    @item = Item.find_by_title("%#{params[:key]}%")
+    redirect_to
   end
 end

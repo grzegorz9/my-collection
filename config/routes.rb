@@ -1,10 +1,11 @@
 MyCollection::Application.routes.draw do
-  
+
   resources :categories
 
 
   resources :items do
     resources :comments
+    post 'search', :on => :collection
   end
 
 

@@ -2,6 +2,10 @@
   <ul>
     <li><%= link_to 'Home', root_path %></li>
     <li><%= link_to 'Help', help_path %></li>
-    <li><%= link_to 'Sign in', '#' %></li>
+    <li><%= link_to 'Sign up', signup_path %></li>
   </ul>
+  <form action="items/search" method="post">
+    <input name="key" type="input" />
+    <input value="Search" type="submit" />
+  </form>
 </div>

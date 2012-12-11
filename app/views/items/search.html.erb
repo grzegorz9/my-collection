@@ -1,0 +1,13 @@
+<html>
+  <h1>Search results</h1>
+  <table align="center">
+    <tr>
+      <th>Title</th>
+    </tr>
+    <% @item.each do |item| %>
+    <tr>
+      <td><% item.title %></td>
+    </tr>
+    <% end %>
+  </table>
+</html>
