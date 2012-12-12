@@ -14,6 +14,15 @@ MyCollection::Application.routes.draw do
   match '/contact', to: 'main_pages#contact'
   match '/help', to: 'main_pages#help'
   
+  resources :users
+  match '/signup', to: 'users#new'
+  match '/login', to: 'users#login'
+  match '/logout', to: 'users#logout'
+  match '/my_account', to: 'users#my_account'
+  resources :users do
+    post 'process_login', on: :collection
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

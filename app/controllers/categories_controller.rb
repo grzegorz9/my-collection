@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_filter :login_required, only: [:new, :edit, :create, :update, :destroy]
+  before_filter :permission_required, only: [:new, :edit, :create, :update, :destroy]
   # GET /categories
   # GET /categories.json
   def index

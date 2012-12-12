@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  before_filter :login_required, only: [:new, :edit, :create, :update, :destroy]
+  before_filter :permission_required, only: [:new, :edit, :create, :update, :destroy]
+  
   # GET /items
   # GET /items.json
   def index

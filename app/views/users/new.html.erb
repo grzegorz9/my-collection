@@ -1,0 +1,25 @@
+<%= provide(:page_title, 'Sign Up') %>
+<h1>Sign Up</h1>
+<p>
+  Create your account using this form. Your account will be added to this page.
+  Then you will be able to log in using your username and password.
+</p>
+<%= form_for @user do |f| %>
+
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <% for message in @user.errors.full_messages %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+<p><%= f.label :email %><br><%= f.text_field :email %></p>
+
+<p><%= f.label :password %><br><%= f.password_field :password %></p>
+
+<p><%= f.label :password_confirmation %><br><%= f.password_field :password_confirmation %></p>
+
+<p class="button"><%= f.submit "Create Account" %></p>
+
+<% end %>
