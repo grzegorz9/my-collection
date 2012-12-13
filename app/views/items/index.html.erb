@@ -6,6 +6,7 @@
     <th>Title</th>
     <th>Description</th>
     <th>Category</th>
+    <th>Subcategory</th>
     <th></th>
   </tr>
 
@@ -14,6 +15,7 @@
     <td><%= item.title %></td>
     <td><%= item.description[0, 120] + '...' %></td>
     <td><%= item.category.name %></td>
+    <td>item.subcategory</td>
     <td><%= link_to 'More', item %></td>
   </tr>
 <% end %>
