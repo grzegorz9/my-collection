@@ -14,7 +14,10 @@
   </tr>  
 </table>
 
-<h3>This item belongs to the '<%= @item.category.name %>' category.</h3>
+<h3>
+  This item belongs to the '<%= @item.category.name %>' category.<br> It is filed under
+  <%= @item.subcategory %>.
+</h3>
 
 <p>
   <%= link_to 'Edit', edit_item_path(@item) %>
